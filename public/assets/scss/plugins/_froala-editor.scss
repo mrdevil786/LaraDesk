@@ -1,0 +1,558 @@
+// FROALA EDITOR
+
+.fr-toolbar,
+.fr-second-toolbar,
+.fr-box.fr-basic .fr-wrapper {
+    border-color: $border !important;
+}
+
+.fr-qi-helper a.fr-btn.fr-floating-btn {
+    padding: 10px !important;
+}
+
+.fr-box a.fr-floating-btn {
+    line-height: 0 !important;
+}
+
+.fr-toolbar .fr-more-toolbar {
+    background-color: #edeef4 !important;
+}
+
+.fr-toolbar .fr-command.fr-btn.fr-open:not(:hover):not(:focus):not(:active) {
+    background-color: #edeef4 !important;
+}
+
+.fr-desktop .fr-command:hover:not(.fr-table-cell),
+.fr-desktop .fr-command:focus:not(.fr-table-cell),
+.fr-desktop .fr-command.fr-btn-hover:not(.fr-table-cell),
+.fr-desktop .fr-command.fr-expanded:not(.fr-table-cell) {
+    background: #edeef4 !important;
+}
+
+.fr-command.fr-btn + .fr-dropdown-menu .fr-dropdown-wrapper .fr-dropdown-content ul.fr-dropdown-list li a.fr-active {
+    background: #edeef4 !important;
+}
+
+.fr-toolbar .fr-command.fr-btn.fr-dropdown.fr-active,
+.fr-popup .fr-command.fr-btn.fr-dropdown.fr-active,
+.fr-modal .fr-command.fr-btn.fr-dropdown.fr-active {
+    background: #edeef4 !important;
+}
+
+.fr-markdown-editor {
+    background: #edeef4 !important;
+}
+
+.fr-quick-insert {
+    z-index: 1 !important;
+}
+
+.fr-popup {
+    z-index: 99 !important;
+}
+
+#fr-logo:hover > span,
+#fr-logo:focus > span,
+.fr-trim-button {
+    color: $primary-1 !important;
+}
+
+#fr-logo:hover>svg .fr-logo, #fr-logo:focus>svg .fr-logo{
+    fill: $primary-1 !important;
+}
+
+.fr-toolbar .fr-btn-grp .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path, .fr-toolbar .fr-more-toolbar .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path, .fr-toolbar .fr-buttons:not(.fr-tabs) .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path, .fr-popup .fr-btn-grp .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path, .fr-popup .fr-more-toolbar .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path, .fr-popup .fr-buttons:not(.fr-tabs) .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path, .fr-modal .fr-btn-grp .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path, .fr-modal .fr-more-toolbar .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path, .fr-modal .fr-buttons:not(.fr-tabs) .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path{
+    fill: $primary-1 !important;
+}
+
+@media (max-width:768px){
+    .fr-markdown-view{
+        width: 100% !important;
+    }
+}
+
+.dark-mode {
+    .fr-toolbar,
+    .fr-box.fr-basic .fr-wrapper,
+    .fr-second-toolbar {
+        background-color: $dark-body !important;
+    }
+    .fr-toolbar .fr-command.fr-btn svg path,
+    .fr-popup .fr-command.fr-btn svg path,
+    .fr-modal .fr-command.fr-btn svg path {
+        fill: $text-color !important;
+    }
+    .fr-toolbar,
+    .fr-second-toolbar,
+    .fr-box.fr-basic .fr-wrapper {
+        border-color: $border-dark !important;
+    }
+    .fr-desktop .fr-command:hover:not(.fr-table-cell),
+    .fr-desktop .fr-command:focus:not(.fr-table-cell),
+    .fr-desktop .fr-command.fr-btn-hover:not(.fr-table-cell),
+    .fr-desktop .fr-command.fr-expanded:not(.fr-table-cell) {
+        background-color: $dark-theme !important;
+    }
+    .fr-toolbar .fr-more-toolbar {
+        background-color: $dark-theme !important;
+    }
+    .fr-box.fr-basic .fr-element {
+        color: $text-color !important;
+    }
+    .fr-command.fr-btn + .fr-dropdown-menu {
+        background-color: $dark-body !important;
+    }
+    .fr-toolbar .fr-command.fr-btn.fr-open:not(:hover):not(:focus):not(:active) {
+        background-color: $dark-theme !important;
+    }
+    .fr-toolbar {
+        color: $text-color;
+    }
+    .fr-command.fr-btn
+        + .fr-dropdown-menu
+        .fr-dropdown-wrapper
+        .fr-dropdown-content
+        ul.fr-dropdown-list
+        li
+        a.fr-active {
+        background-color: $dark-theme !important;
+    }
+    .fr-popup {
+        background-color: $dark-theme !important;
+        color: $text-color;
+    }
+    .fr-trim-button,
+    .fr-popup .fr-buttons.fr-tabs,
+    .fr-popup .fr-files-upload-layer:hover {
+        background-color: $dark-theme !important;
+        color: $primary-1;
+    }
+    .fr-toolbar .fr-newline {
+        background-color: $border-dark;
+    }
+    .fr-toolbar .fr-command.fr-btn.fr-btn-active-popup,
+    .fr-popup .fr-command.fr-btn.fr-btn-active-popup,
+    .fr-modal .fr-command.fr-btn.fr-btn-active-popup {
+        background-color: $dark-body;
+    }
+    .fr-toolbar .fr-tabs .fr-command.fr-btn:not(:hover):not(:focus).fr-active,
+    .fr-toolbar .fr-tabs .fr-command.fr-btn:not(:hover):not(:focus).fr-active-tab,
+    .fr-popup .fr-tabs .fr-command.fr-btn:not(:hover):not(:focus).fr-active,
+    .fr-popup .fr-tabs .fr-command.fr-btn:not(:hover):not(:focus).fr-active-tab,
+    .fr-modal .fr-tabs .fr-command.fr-btn:not(:hover):not(:focus).fr-active,
+    .fr-modal .fr-tabs .fr-command.fr-btn:not(:hover):not(:focus).fr-active-tab {
+        background-color: $dark-body;
+    }
+    .fr-popup .fr-input-line input[type="text"],
+    .fr-popup .fr-input-line input[type="number"],
+    .fr-popup .fr-input-line textarea {
+        border-color: $border-dark;
+        background-color: $dark-theme;
+        color: $text-color;
+    }
+    .fr-popup .fr-input-line input + label,
+    .fr-popup .fr-input-line textarea + label {
+        color: $text-color;
+        background-color: $dark-theme;
+    }
+    .fr-popup .fr-action-buttons button.fr-command {
+        color: $primary-1;
+    }
+    .fr-popup .fr-input-line input[type="text"]:focus,
+    .fr-popup .fr-input-line input[type="number"]:focus,
+    .fr-popup .fr-input-line textarea:focus {
+        border-color: $border-dark;
+    }
+    .fr-qi-helper a.fr-btn.fr-floating-btn {
+        background-color: $dark-theme;
+    }
+    .fr-qi-helper a.fr-btn.fr-floating-btn svg {
+        fill: $text-color;
+    }
+    .fr-view table td,
+    .fr-view table th {
+        border-color: $border-dark;
+    }
+    .fr-element table td.fr-selected-cell,
+    .fr-element table th.fr-selected-cell {
+        border-color: $primary-1;
+    }
+    .fr-separator {
+        background-color: $border-dark;
+    }
+    .fr-toolbar .fr-command.fr-btn.fr-dropdown.fr-active,
+    .fr-popup .fr-command.fr-btn.fr-dropdown.fr-active,
+    .fr-modal .fr-command.fr-btn.fr-dropdown.fr-active {
+        background-color: $dark-body !important;
+    }
+    .fr-command.fr-btn + .fr-dropdown-menu .fr-dropdown-wrapper .fr-dropdown-content ul.fr-dropdown-list li a svg path,
+    .fr-box a.fr-floating-btn svg,
+    .fr-box a.fr-floating-btn:hover svg {
+        fill: $text-color;
+    }
+    .fr-view table th,
+    .fr-view table tfoot td,
+    .fr-view table.fr-alternate-rows tbody tr:nth-child(2n) {
+        background-color: $dark-theme;
+    }
+    .fr-view table td,
+    .fr-view table th {
+        border-color: $border-dark;
+    }
+    .fr-box a.fr-floating-btn,
+    .fr-box a.fr-floating-btn:hover {
+        background-color: $dark-theme;
+        color: $text-color;
+    }
+    .fr-popup .fr-video-upload-layer:hover {
+        background-color: $dark-body;
+    }
+    .fr-toolbar .fr-command.fr-btn,
+    .fr-popup .fr-command.fr-btn,
+    .fr-modal .fr-command.fr-btn,
+    .fr-desktop .fr-command.fr-selected:not(.fr-table-cell),
+    .fr-desktop .fr-command:active {
+        color: $text-color;
+    }
+    .fr-desktop .fr-command:hover,
+    .fr-desktop .fr-command:focus,
+    .fr-desktop .fr-command.fr-btn-hover,
+    .fr-desktop .fr-command.fr-expanded {
+        color: $text-color;
+    }
+    .fr-popup .fr-file-upload-layer:hover,
+    .fr-popup .fr-image-upload-layer:hover {
+        background-color: $dark-body;
+    }
+    .fr-file-size,
+    .fr-file-date,
+    #fr-logo > span,
+    .fr-box .fr-counter {
+        color: $white-8;
+    }
+    .fr-markdown-editor, textarea.fr-code{
+        background-color: $dark-theme !important;
+        color: $text-color;
+    }
+    .gutter-horizontal{
+        background-color: $border-dark;
+    }
+    .e-resize-handler{
+        color: $border-dark;
+    }
+    .fr-modal .fr-modal-wrapper .fr-modal-head, .fr-modal .fr-modal-wrapper{
+        background-color: $dark-theme;
+    }
+    .fr-modal{
+        color: $text-color;
+    }
+    .fr-modal .fr-modal-wrapper .fr-modal-body .fr-help-modal table tbody td:first-child{
+        color: $text-color;
+    }
+    .fr-modal .fr-modal-wrapper .fr-modal-body .fr-help-modal table tbody tr, .fr-modal .fr-modal-wrapper .fr-modal-head{
+        border-bottom-color: $border-dark;
+    }
+    .fr-popup .fr-checkbox input:not(:checked)+span{
+        border: solid 2px  $border-dark;
+    }
+}
+
+
+// TRANSPARENT STYLES //
+
+.transparent-mode {
+    .fr-toolbar,
+    .fr-box.fr-basic .fr-wrapper,
+    .fr-second-toolbar {
+        background-color: $transparent-body !important;
+    }
+    .fr-toolbar .fr-command.fr-btn svg path,
+    .fr-popup .fr-command.fr-btn svg path,
+    .fr-modal .fr-command.fr-btn svg path {
+        fill: $text-color !important;
+    }
+    .fr-toolbar,
+    .fr-second-toolbar,
+    .fr-box.fr-basic .fr-wrapper {
+        border-color: $transparent-border !important;
+    }
+    .fr-desktop .fr-command:hover:not(.fr-table-cell),
+    .fr-desktop .fr-command:focus:not(.fr-table-cell),
+    .fr-desktop .fr-command.fr-btn-hover:not(.fr-table-cell),
+    .fr-desktop .fr-command.fr-expanded:not(.fr-table-cell) {
+        background-color: $transparent-theme !important;
+    }
+    .fr-toolbar .fr-more-toolbar {
+        background-color: $transparent-theme !important;
+    }
+    .fr-box.fr-basic .fr-element {
+        color: $text-color !important;
+    }
+    .fr-command.fr-btn + .fr-dropdown-menu {
+        background-color: $transparent-body !important;
+    }
+    .fr-toolbar .fr-command.fr-btn.fr-open:not(:hover):not(:focus):not(:active) {
+        background-color: $transparent-theme !important;
+    }
+    .fr-toolbar {
+        color: $text-color;
+    }
+    .fr-command.fr-btn
+        + .fr-dropdown-menu
+        .fr-dropdown-wrapper
+        .fr-dropdown-content
+        ul.fr-dropdown-list
+        li
+        a.fr-active {
+        background-color: $transparent-theme !important;
+    }
+    .fr-popup {
+        background-color: $transparent-body !important;
+        color: $text-color;
+    }
+    .fr-trim-button,
+    .fr-popup .fr-buttons.fr-tabs,
+    .fr-popup .fr-files-upload-layer:hover {
+        background-color: $transparent-body !important;
+        color: $primary-1;
+    }
+    .fr-toolbar .fr-newline {
+        background-color: $transparent-border;
+    }
+    .fr-toolbar .fr-command.fr-btn.fr-btn-active-popup,
+    .fr-popup .fr-command.fr-btn.fr-btn-active-popup,
+    .fr-modal .fr-command.fr-btn.fr-btn-active-popup {
+        background-color: $transparent-body;
+    }
+    .fr-toolbar .fr-tabs .fr-command.fr-btn:not(:hover):not(:focus).fr-active,
+    .fr-toolbar .fr-tabs .fr-command.fr-btn:not(:hover):not(:focus).fr-active-tab,
+    .fr-popup .fr-tabs .fr-command.fr-btn:not(:hover):not(:focus).fr-active,
+    .fr-popup .fr-tabs .fr-command.fr-btn:not(:hover):not(:focus).fr-active-tab,
+    .fr-modal .fr-tabs .fr-command.fr-btn:not(:hover):not(:focus).fr-active,
+    .fr-modal .fr-tabs .fr-command.fr-btn:not(:hover):not(:focus).fr-active-tab {
+        background-color: $transparent-body;
+    }
+    .fr-popup .fr-input-line input[type="text"],
+    .fr-popup .fr-input-line input[type="number"],
+    .fr-popup .fr-input-line textarea {
+        border-color: $transparent-border;
+        background-color: $transparent-theme;
+        color: $text-color;
+    }
+    .fr-popup .fr-input-line input + label,
+    .fr-popup .fr-input-line textarea + label {
+        color: $text-color;
+        background-color: transparent;
+    }
+    .fr-popup .fr-action-buttons button.fr-command {
+        color: $white-8;
+    }
+    .fr-popup .fr-input-line input[type="text"]:focus,
+    .fr-popup .fr-input-line input[type="number"]:focus,
+    .fr-popup .fr-input-line textarea:focus {
+        border-color: $transparent-border;
+    }
+    .fr-qi-helper a.fr-btn.fr-floating-btn {
+        background-color: $transparent-body;
+    }
+    .fr-qi-helper a.fr-btn.fr-floating-btn svg {
+        fill: $text-color;
+    }
+    .fr-view table td,
+    .fr-view table th {
+        border-color: $transparent-border;
+    }
+    .fr-element table td.fr-selected-cell,
+    .fr-element table th.fr-selected-cell {
+        border-color: $primary-1;
+    }
+    .fr-separator {
+        background-color: $transparent-border;
+    }
+    .fr-toolbar .fr-command.fr-btn.fr-dropdown.fr-active,
+    .fr-popup .fr-command.fr-btn.fr-dropdown.fr-active,
+    .fr-modal .fr-command.fr-btn.fr-dropdown.fr-active {
+        background-color: $transparent-body !important;
+    }
+    .fr-command.fr-btn + .fr-dropdown-menu .fr-dropdown-wrapper .fr-dropdown-content ul.fr-dropdown-list li a svg path,
+    .fr-box a.fr-floating-btn svg,
+    .fr-box a.fr-floating-btn:hover svg {
+        fill: $text-color;
+    }
+    .fr-view table th,
+    .fr-view table tfoot td,
+    .fr-view table.fr-alternate-rows tbody tr:nth-child(2n) {
+        background-color: $transparent-theme;
+    }
+    .fr-view table td,
+    .fr-view table th {
+        border-color: $transparent-border;
+    }
+    .fr-box a.fr-floating-btn,
+    .fr-box a.fr-floating-btn:hover {
+        background-color: $transparent-body;
+        color: $text-color;
+    }
+    .fr-popup .fr-video-upload-layer:hover {
+        background-color: $transparent-body;
+    }
+    .fr-toolbar .fr-command.fr-btn,
+    .fr-popup .fr-command.fr-btn,
+    .fr-modal .fr-command.fr-btn,
+    .fr-desktop .fr-command.fr-selected:not(.fr-table-cell),
+    .fr-desktop .fr-command:active {
+        color: $text-color;
+    }
+    .fr-desktop .fr-command:hover,
+    .fr-desktop .fr-command:focus,
+    .fr-desktop .fr-command.fr-btn-hover,
+    .fr-desktop .fr-command.fr-expanded {
+        color: $text-color;
+    }
+    .fr-popup .fr-file-upload-layer:hover,
+    .fr-popup .fr-image-upload-layer:hover {
+        background-color: $transparent-body;
+    }
+    .fr-file-size,
+    .fr-file-date,
+    #fr-logo > span,
+    .fr-box .fr-counter {
+        color: $white-8;
+    }
+    .fr-markdown-editor, textarea.fr-code{
+        background-color: $transparent-theme !important;
+        color: $text-color;
+    }
+    .gutter-horizontal{
+        background-color: $transparent-border;
+    }
+    .e-resize-handler{
+        color: $transparent-border;
+    }
+    .fr-modal .fr-modal-wrapper .fr-modal-head, .fr-modal .fr-modal-wrapper{
+        background-color: $transparent-body;
+    }
+    .fr-modal{
+        color: $text-color;
+    }
+    .fr-modal .fr-modal-wrapper .fr-modal-body .fr-help-modal table tbody td:first-child{
+        color: $text-color;
+    }
+    .fr-modal .fr-modal-wrapper .fr-modal-body .fr-help-modal table tbody tr, .fr-modal .fr-modal-wrapper .fr-modal-head{
+        border-bottom-color: $transparent-border;
+    }
+    .fr-toolbar .fr-command.fr-btn.fr-dropdown:after, .fr-popup .fr-command.fr-btn.fr-dropdown:after, .fr-modal .fr-command.fr-btn.fr-dropdown:after{
+        border-top: 4px solid $transparent-border;
+    }
+    .fr-toolbar .fr-btn-grp .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path, .fr-toolbar .fr-more-toolbar .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path, .fr-toolbar .fr-buttons:not(.fr-tabs) .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path, .fr-popup .fr-btn-grp .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path, .fr-popup .fr-more-toolbar .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path, .fr-popup .fr-buttons:not(.fr-tabs) .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path, .fr-modal .fr-btn-grp .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path, .fr-modal .fr-more-toolbar .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path, .fr-modal .fr-buttons:not(.fr-tabs) .fr-command.fr-btn.fr-active:not(.fr-dropdown) svg path{
+        fill: $text-color !important;
+    }
+    .fr-popup .fr-action-buttons button.fr-command:hover, .fr-popup .fr-action-buttons button.fr-command:focus{
+        color: $text-color;
+    }
+    .fr-popup .fr-checkbox input:not(:checked)+span{
+        border: solid 2px $transparent-border;
+    }
+    #fr-logo:hover>span, #fr-logo:focus>span, .fr-trim-button{
+        color: $text-color !important;
+    }
+}
+
+.rtl{
+    .fr-modal .fr-modal-wrapper .fr-modal-body .fr-help-modal{
+        text-align: right;
+    }
+    .fr-modal .fr-modal-wrapper .fr-modal-head h4 {
+        float: right;
+    }
+    .fr-modal .fr-modal-wrapper .fr-modal-head .fr-modal-close {
+        left: 0;
+        right: inherit;
+    }
+    .fr-modal .fr-modal-wrapper .fr-modal-body .fr-help-modal table th {
+        text-align: right;
+    }
+    .fr-box.fr-basic .fr-element, .fr-popup {
+        text-align: right;
+    }
+    .fr-toolbar .fr-command.fr-btn, .fr-popup .fr-command.fr-btn, .fr-modal .fr-command.fr-btn{
+        text-align: right;
+    }
+    .fr-toolbar .fr-command.fr-btn span, .fr-popup .fr-command.fr-btn span, .fr-modal .fr-command.fr-btn span{
+        float: right;
+    }
+    .fr-popup .fr-input-line input+label, .fr-popup .fr-input-line textarea+label {
+        right: 12px;
+        left: inherit;
+    }
+    .fr-popup .fr-input-line input.fr-not-empty+label, .fr-popup .fr-input-line textarea.fr-not-empty+label{
+        right: 4px;
+        left: inherit;
+    }
+    .fr-input-line{
+        input{
+            text-align: end;
+        }
+    }
+    .fr-quick-insert{
+        padding-left: 10px;
+        padding-right: inherit;
+        left: auto !important;
+        right: -30px;
+    }
+    .fr-qi-helper{
+        padding-right: 20px;
+        padding-left: inherit;
+        left: auto !important;
+        right: auto;
+    }
+    .fr-toolbar{
+        text-align: right;
+    }
+    .fr-toolbar .fr-float-left, #fr-logo{
+        float: right;
+    }
+    .fr-toolbar .fr-btn-grp {
+        margin: 0 12px 0 17px;
+    }
+    .fr-toolbar .fr-command.fr-btn, .fr-popup .fr-command.fr-btn, .fr-modal .fr-command.fr-btn, #fr-logo>span{
+        float: right;
+    }
+    .fr-toolbar .fr-float-right, .fr-box .fr-counter{
+        float: left;
+    }
+    .fr-toolbar .fr-more-toolbar{
+        float: right;  
+    }
+    .fr-box.fr-basic .fr-wrapper{
+        right: 0;
+        left: inherit;
+    }
+    .fr-command.fr-btn+.fr-dropdown-menu .fr-dropdown-wrapper{
+        float: right;
+        text-align: right;
+    }
+    .fr-toolbar .fr-btn-wrap, .fr-popup .fr-btn-wrap, .fr-modal .fr-btn-wrap{
+        float: right;
+    }
+    .fr-command.fr-btn.fr-options{
+        margin-right: -5px;
+        margin-left: inherit;
+    }
+    .fr-toolbar .fr-command.fr-btn.fr-dropdown:after, .fr-popup .fr-command.fr-btn.fr-dropdown:after, .fr-modal .fr-command.fr-btn.fr-dropdown:after{
+        left: 2px;
+        right: inherit;
+    }
+    .fr-toolbar .fr-command.fr-btn.fr-dropdown i, .fr-toolbar .fr-command.fr-btn.fr-dropdown span, .fr-toolbar .fr-command.fr-btn.fr-dropdown img, .fr-toolbar .fr-command.fr-btn.fr-dropdown svg, .fr-popup .fr-command.fr-btn.fr-dropdown i, .fr-popup .fr-command.fr-btn.fr-dropdown span, .fr-popup .fr-command.fr-btn.fr-dropdown img, .fr-popup .fr-command.fr-btn.fr-dropdown svg, .fr-modal .fr-command.fr-btn.fr-dropdown i, .fr-modal .fr-command.fr-btn.fr-dropdown span, .fr-modal .fr-command.fr-btn.fr-dropdown img, .fr-modal .fr-command.fr-btn.fr-dropdown svg{
+        margin-right: 3px;
+        margin-left: 11px;
+    }
+    .fr-box a.fr-floating-btn.fr-btn+.fr-btn {
+        margin-right: 10px;
+        margin-left: inherit;
+    }    
+    .fr-box a.fr-floating-btn{
+        right: 0;
+        left: inherit;
+    }
+}
