@@ -193,7 +193,7 @@
                                         class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="side-menu-label1"><a href="javascript:void(0)">Apps</a></li>
-                                    <li><a href="/" class="slide-item"> Manage Users</a></li>
+                                    <li><a href="{{ url('users/') }}" class="slide-item"> Manage Users</a></li>
                                 </ul>
                             </li>
                         </ul>
