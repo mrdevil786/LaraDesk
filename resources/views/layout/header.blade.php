@@ -54,7 +54,7 @@
                         <a aria-label="Hide Sidebar" class="app-sidebar__toggle" data-bs-toggle="sidebar"
                             href="javascript:void(0)"></a>
                         <!-- sidebar-toggle-->
-                        <a class="logo-horizontal " href="index.html">
+                        <a class="logo-horizontal " href="/">
                             <img src="../assets/images/brand/logo.png" class="header-brand-img desktop-logo"
                                 alt="logo">
                             <img src="../assets/images/brand/logo-3.png" class="header-brand-img light-logo1"
@@ -157,7 +157,7 @@
                 <div class="app-sidebar__overlay" data-bs-toggle="sidebar"></div>
                 <div class="app-sidebar">
                     <div class="side-header">
-                        <a class="header-brand1" href="index.html">
+                        <a class="header-brand1" href="/">
                             <img src="../assets/images/brand/logo.png" class="header-brand-img desktop-logo"
                                 alt="logo">
                             <img src="../assets/images/brand/logo-1.png" class="header-brand-img toggle-logo"
@@ -188,31 +188,12 @@
                             </li>
                             <li class="slide">
                                 <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i
-                                        class="side-menu__icon fe fe-slack"></i><span
-                                        class="side-menu__label">Apps</span><i
+                                        class="side-menu__icon fe fe-user"></i><span
+                                        class="side-menu__label">Users</span><i
                                         class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="side-menu-label1"><a href="javascript:void(0)">Apps</a></li>
-                                    <li><a href="cards.html" class="slide-item"> Cards design</a></li>
-                                    <li><a href="calendar.html" class="slide-item"> Default calendar</a></li>
-                                    <li><a href="calendar2.html" class="slide-item"> Full calendar</a></li>
-                                    <li><a href="chat.html" class="slide-item"> Chat</a></li>
-                                    <li><a href="notify.html" class="slide-item"> Notifications</a></li>
-                                    <li><a href="sweetalert.html" class="slide-item"> Sweet alerts</a></li>
-                                    <li><a href="rangeslider.html" class="slide-item"> Range slider</a></li>
-                                    <li><a href="scroll.html" class="slide-item"> Content Scroll bar</a></li>
-                                    <li><a href="loaders.html" class="slide-item"> Loaders</a></li>
-                                    <li><a href="counters.html" class="slide-item"> Counters</a></li>
-                                    <li><a href="rating.html" class="slide-item"> Rating</a></li>
-                                    <li><a href="timeline.html" class="slide-item"> Timeline</a></li>
-                                    <li><a href="treeview.html" class="slide-item"> Treeview</a></li>
-                                    <li><a href="chart.html" class="slide-item"> Charts</a></li>
-                                    <li><a href="footers.html" class="slide-item"> Footers</a></li>
-                                    <li><a href="users-list.html" class="slide-item"> User List</a></li>
-                                    <li><a href="search.html" class="slide-item">Search</a></li>
-                                    <li><a href="crypto-currencies.html" class="slide-item"> Crypto-currencies</a>
-                                    </li>
-                                    <li><a href="widgets.html" class="slide-item"> Widgets</a></li>
+                                    <li><a href="/" class="slide-item"> Manage Users</a></li>
                                 </ul>
                             </li>
                         </ul>
