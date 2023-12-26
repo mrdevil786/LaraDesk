@@ -8642,7 +8642,7 @@ body.fixed-header .page {
 
 .page-header {
     display: -ms-flexbox;
-    display: flex;
+    display: block;
     -ms-flex-align: center;
     align-items: center;
     margin: 1.5rem 0rem 1.5rem;
