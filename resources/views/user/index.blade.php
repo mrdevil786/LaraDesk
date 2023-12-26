@@ -5,7 +5,7 @@
     <div class="page-header">
         <div class="d-flex justify-content-between align-items-center">
             <h1 class="page-title">Manage Users</h1>
-            <button class="btn btn-success">Add User</button>
+            <button class="btn btn-primary off-canvas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Add User</button>
         </div>
     </div>
     <!-- PAGE-HEADER END -->
@@ -53,6 +53,20 @@
         </div>
     </div>
     <!-- End Row -->
+
+    <!--Right Offcanvas-->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Add New User</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fe fe-x fs-18"></i></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
+                'Content here, content here', making it look like readable English.</p>
+        </div>
+    </div>
+    <!--/Right Offcanvas-->
+
 @endsection
 
 @section('custom-script')
