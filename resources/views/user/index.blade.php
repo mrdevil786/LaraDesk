@@ -3,7 +3,7 @@
 @section('main-section')
     <!-- PAGE-HEADER -->
     <div class="page-header">
-        <h1 class="page-title">Manage Users</h1>
+        <h1 class="page-title">Users</h1>
     </div>
     <!-- PAGE-HEADER END -->
 
@@ -12,7 +12,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">All Users</h3>
+                    <h3 class="card-title">All Users</h3>          
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
