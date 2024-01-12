@@ -67,19 +67,19 @@
                         <label for="validationServer01">Full Name</label>
                         <input type="text" class="form-control is-valid" id="validationServer01"
                             value="" placeholder="Full Name" required>
-                        <div class="valid-feedback">Looks good!</div>
+                        {{-- <div class="valid-feedback">Looks good!</div> --}}
                     </div>
                     <div class="col-xl-12 mb-3">
                         <label for="validationServer02">Email</label>
                         <input type="text" class="form-control is-valid" id="validationServer02"
                             value="" placeholder="Email" required>
-                        <div class="valid-feedback">Looks good!</div>
+                        {{-- <div class="valid-feedback">Looks good!</div> --}}
                     </div>
                     <div class="col-xl-12 mb-3">
                         <label for="validationServer02">Password</label>
                         <input type="text" class="form-control is-valid" id="validationServer02"
                             value="" placeholder="Password" required>
-                        <div class="valid-feedback">Looks good!</div>
+                        {{-- <div class="valid-feedback">Looks good!</div> --}}
                     </div>
                     <div class="col-xl-12 mb-3">
                         <label for="validationServer04">User Role</label>
@@ -91,8 +91,8 @@
                             <option>Editor</option>
                             <option>Viewer</option>
                         </select>
-                        <div id="validationServer04Feedback" class="invalid-feedback">Please
-                            select a valid state.</div>
+                        {{-- <div id="validationServer04Feedback" class="invalid-feedback">Please
+                            select a valid state.</div> --}}
                     </div>
                 </div>
                 
