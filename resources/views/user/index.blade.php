@@ -61,8 +61,45 @@
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fe fe-x fs-18"></i></button>
         </div>
         <div class="offcanvas-body">
-            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
-                'Content here, content here', making it look like readable English.</p>
+            <form>
+                <div class="form-row">
+                    <div class="col-xl-12 mb-3">
+                        <label for="validationServer01">Full Name</label>
+                        <input type="text" class="form-control is-valid" id="validationServer01"
+                            value="" placeholder="Full Name" required>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                    <div class="col-xl-12 mb-3">
+                        <label for="validationServer02">Email</label>
+                        <input type="text" class="form-control is-valid" id="validationServer02"
+                            value="" placeholder="Email" required>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                    <div class="col-xl-12 mb-3">
+                        <label for="validationServer02">Password</label>
+                        <input type="text" class="form-control is-valid" id="validationServer02"
+                            value="" placeholder="Password" required>
+                        <div class="valid-feedback">Looks good!</div>
+                    </div>
+                    <div class="col-xl-12 mb-3">
+                        <label for="validationServer04">User Role</label>
+                        <select class="form-select form-control is-invalid"
+                            id="validationServer04"
+                            aria-describedby="validationServer04Feedback" required>
+                            <option selected disabled value="">Choose...</option>
+                            <option>Administrator</option>
+                            <option>Editor</option>
+                            <option>Viewer</option>
+                        </select>
+                        <div id="validationServer04Feedback" class="invalid-feedback">Please
+                            select a valid state.</div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-12 text-center">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </form>
         </div>
     </div>
     <!--/Right Offcanvas-->
