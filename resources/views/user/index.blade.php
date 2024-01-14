@@ -62,13 +62,13 @@
                                             @endif
                                         </td>
                                         <td class="text-center">
-                                            <a>
+                                            <a href="#">
                                                 <button class="btn btn-outline-secondary btn-pill btn-sm"><i
                                                         class="fa fa-eye"></i></button>
                                             </a>
 
                                             @if (auth()->user()->user_role != 3)
-                                                <a>
+                                                <a href="#">
                                                     <button class="btn btn-outline-warning btn-pill btn-sm"><i
                                                             class="fa fa-pencil"></i></button>
                                                 </a>
