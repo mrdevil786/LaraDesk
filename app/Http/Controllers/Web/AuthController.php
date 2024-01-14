@@ -8,9 +8,9 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    public function loginpage()
+    public function loginView()
     {
-        return view('login');
+        return view('auth.login');
     }
 
     public function login(Request $request)
@@ -31,11 +31,11 @@ class AuthController extends Controller
 
     public function logout()
     {
-        Auth::logout();
+        Auth::guard('web')->logout();
 
         request()->session()->invalidate();
         request()->session()->regenerateToken();
 
-        return redirect()->route('login')->with('success', 'Successfully logged out.');
+        return redirect()->route('view.login')->with('success', 'Successfully logged out.');
     }
 }

@@ -5,7 +5,8 @@
     <div class="page-header">
         <div class="d-flex justify-content-between align-items-center">
             <h1 class="page-title">Manage Users</h1>
-            <button class="btn btn-primary off-canvas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Add User</button>
+            <button class="btn btn-primary off-canvas" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Add User</button>
         </div>
     </div>
     <!-- PAGE-HEADER END -->
@@ -30,20 +31,36 @@
                                     <th class="wd-25p border-bottom-0">Created At</th>
                                     <th class="wd-25p border-bottom-0">Updated At</th>
                                     <th class="wd-25p border-bottom-0">Status</th>
+                                    <th class="wd-25p border-bottom-0">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($users as $user)    
-                                <tr>
-                                    <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $user->user_role == 1 ? 'Admin' : 'User' }}</td>
-                                    <td>{{ $user->name }}</td>
-                                    <td>{{ $user->email }}</td>
-                                    <td>{{ $user->email_verified_at ? 'Yes' : 'No' }}</td>
-                                    <td>{{ $user->created_at }}</td>
-                                    <td>{{ $user->updated_at }}</td>
-                                    <td>{{ $user->status }}</td>
-                                </tr>
+                                @foreach ($users as $user)
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>
+                                            @if($user->user_role == 1)
+                                                Admin
+                                            @elseif($user->user_role == 2)
+                                                Manager
+                                            @elseif($user->user_role == 3)
+                                                Member
+                                            @else
+                                                Unknown
+                                            @endif
+                                        </td>
+                                        <td>{{ $user->name }}</td>
+                                        <td>{{ $user->email }}</td>
+                                        <td>{{ $user->email_verified_at ? 'Yes' : 'No' }}</td>
+                                        <td>{{ $user->created_at }}</td>
+                                        <td>{{ $user->updated_at }}</td>
+                                        <td>{{ $user->status }}</td>
+                                        <td>
+                                            <button class="btn btn-primary btn-pill btn-sm"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-primary btn-pill btn-sm"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-primary btn-pill btn-sm"><i class="fa fa-pencil"></i></button>
+                                        </td>
+                                    </tr>
                                 @endforeach
                             </tbody>
                         </table>
@@ -58,44 +75,46 @@
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
             <h5 id="offcanvasRightLabel">Add New User</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fe fe-x fs-18"></i></button>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                    class="fe fe-x fs-18"></i></button>
         </div>
         <div class="offcanvas-body">
-            <form>
+            <form method="POST" action="{{ route('users.store') }}">
+                @csrf <!-- Add CSRF token -->
+
                 <div class="form-row">
                     <div class="col-xl-12 mb-3">
                         <label for="validationServer01">Full Name</label>
-                        <input type="text" class="form-control is-valid" id="validationServer01"
+                        <input type="text" class="form-control is-valid" id="validationServer01" name="name"
                             value="" placeholder="Full Name" required>
-                        {{-- <div class="valid-feedback">Looks good!</div> --}}
                     </div>
                     <div class="col-xl-12 mb-3">
                         <label for="validationServer02">Email</label>
-                        <input type="text" class="form-control is-valid" id="validationServer02"
+                        <input type="text" class="form-control is-valid" id="validationServer02" name="email"
                             value="" placeholder="Email" required>
-                        {{-- <div class="valid-feedback">Looks good!</div> --}}
                     </div>
                     <div class="col-xl-12 mb-3">
-                        <label for="validationServer02">Password</label>
-                        <input type="text" class="form-control is-valid" id="validationServer02"
-                            value="" placeholder="Password" required>
-                        {{-- <div class="valid-feedback">Looks good!</div> --}}
+                        <label for="validationServer03">Password</label>
+                        <input type="password" class="form-control is-valid" id="validationServer03" name="password"
+                            placeholder="Password" required>
                     </div>
                     <div class="col-xl-12 mb-3">
-                        <label for="validationServer04">User Role</label>
-                        <select class="form-select form-control is-invalid"
-                            id="validationServer04"
-                            aria-describedby="validationServer04Feedback" required>
+                        <label for="validationServer04">Confirm Password</label>
+                        <input type="password" class="form-control is-valid" id="validationServer04"
+                            name="password_confirmation" placeholder="Confirm Password" required>
+                    </div>
+                    <div class="col-xl-12 mb-3">
+                        <label for="validationServer05">User Role</label>
+                        <select class="form-select form-control is-invalid" id="validationServer05" name="role"
+                            aria-describedby="validationServer05Feedback" required>
                             <option selected disabled value="">Choose...</option>
-                            <option>Administrator</option>
-                            <option>Editor</option>
-                            <option>Viewer</option>
+                            <option value="1">Administrator</option>
+                            <option value="2">Editor</option>
+                            <option value="3">Viewer</option>
                         </select>
-                        {{-- <div id="validationServer04Feedback" class="invalid-feedback">Please
-                            select a valid state.</div> --}}
                     </div>
                 </div>
-                
+
                 <div class="col-xl-12 text-center">
                     <button class="btn btn-primary" type="submit">Submit form</button>
                 </div>
@@ -103,7 +122,6 @@
         </div>
     </div>
     <!--/Right Offcanvas-->
-
 @endsection
 
 @section('custom-script')
