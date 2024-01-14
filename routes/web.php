@@ -15,20 +15,29 @@ Route::middleware(['auth:sanctum','web'])->group(function () {
     Route::get('/', [BasicController::class, 'dashboard'])->name('dashboard');
     Route::get('logout', [AuthController::class, 'logout'])->name('user.logout');
 
-    Route::prefix('users')->middleware(['admin'])->group(function () {
-        Route::get('/{id}', [UsersController::class, 'destroy'])->name('users.destroy');
-        Route::put('status', [UsersController::class, 'status'])->name('users.status');
+    Route::name('users.')
+    ->prefix('users')
+    ->middleware('admin')
+    ->controller(UsersController::class)->group(function () {
+        Route::get('/{id}','destroy')->name('destroy');
+        Route::put('status', 'status')->name('status');
     });
 
-    Route::prefix('users')->middleware(['manager'])->group(function () {
-        Route::post('store', [UsersController::class, 'store'])->name('users.store');
-        Route::get('edit/{id}', [UsersController::class, 'edit'])->name('users.edit');
-        Route::post('update', [UsersController::class, 'update'])->name('users.update');
+    Route::name('users.')
+    ->prefix('users')
+    ->middleware('manager')
+    ->controller(UsersController::class)->group(function () {
+        Route::post('store','store')->name('store');
+        Route::get('edit/{id}', 'edit')->name('edit');
+        Route::post('update', 'update')->name('update');
     });
 
-    Route::prefix('users')->middleware(['member'])->group(function () {
-        Route::get('/', [UsersController::class, 'index'])->name('users.index');
-        Route::get('view/{id}', [UsersController::class, 'showUser'])->name('users.show');
+    Route::name('users.')
+    ->prefix('users')
+    ->middleware('member')
+    ->controller(UsersController::class)->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('view/{id}', 'showUser')->name('show');
     });
 });
 
