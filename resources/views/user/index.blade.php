@@ -58,7 +58,9 @@
                                         <td>
                                             <button class="btn btn-outline-secondary btn-pill btn-sm"><i class="fa fa-eye"></i></button>
                                             <button class="btn btn-outline-warning btn-pill btn-sm"><i class="fa fa-pencil"></i></button>
-                                            <button class="btn btn-outline-danger btn-pill btn-sm"><i class="fa fa-trash"></i></button>
+                                            <a href="{{ route('users.destroy', $user->id) }}">
+                                                <button class="btn btn-outline-danger btn-pill btn-sm"><i class="fa fa-trash"></i></button>
+                                            </a>
                                         </td>
                                     </tr>
                                 @endforeach

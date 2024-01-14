@@ -16,9 +16,7 @@ Route::middleware(['auth:sanctum','web'])->group(function () {
     Route::get('logout', [AuthController::class, 'logout'])->name('user.logout');
 
     Route::prefix('users')->middleware(['admin'])->group(function () {
-        Route::get('blocked', [UsersController::class, 'index'])->name('users.blocked');
-        Route::get('deleted', [UsersController::class, 'index'])->name('users.deleted');
-        Route::delete('/{id}', [UsersController::class, 'destroy'])->name('users.destroy');
+        Route::get('/{id}', [UsersController::class, 'destroy'])->name('users.destroy');
         Route::put('status', [UsersController::class, 'status'])->name('users.status');
     });
 
