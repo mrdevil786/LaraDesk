@@ -14,7 +14,7 @@ class ActionPillButton extends Component
 
     public $iconColor;
 
-    public function __construct($href = '#', $iconClass = 'fa fa-thumbs-up', $iconColor = 'success')
+    public function __construct($href = '#', $iconClass = 'fa fa-thumbs-up', $iconColor = 'default')
     {
         $this->href = $href;
         $this->iconClass = $iconClass;

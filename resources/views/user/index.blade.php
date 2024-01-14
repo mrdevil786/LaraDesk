@@ -56,15 +56,13 @@
                                         <td>{{ $user->updated_at }}</td>
                                         <td class="text-center">
                                             @if ($user->status == 'active')
-                                                <span
-                                                    class="badge rounded-pill bg-success badge-sm me-1 mb-1 mt-1">Active</span>
+                                                <x-extras.small-pill pillColor="success" pillText="Active" />
                                             @elseif ($user->status == 'blocked')
-                                                <span
-                                                    class="badge rounded-pill bg-danger badge-sm me-1 mb-1 mt-1">Blocked</span>
+                                                <x-extras.small-pill pillColor="danger" pillText="Blocked" />
                                             @endif
                                         </td>
                                         <td class="text-center">
-                                            <x-buttons.action-pill-button />
+                                            <x-buttons.action-pill-button iconClass="fa fa-eye" iconColor="secondary" />
 
                                             @if (auth()->user()->user_role != 3)
                                                 <x-buttons.action-pill-button iconClass="fa fa-pencil"
