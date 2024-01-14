@@ -21,8 +21,6 @@ class AuthController extends Controller
         ]);
 
         if (Auth::attempt($request->only('email', 'password'))) {
-            $request->user()->createToken('auth-token')->plainTextToken;
-
             return redirect()->route('dashboard')->with('success', 'Successfully logged in.');
         }
 
