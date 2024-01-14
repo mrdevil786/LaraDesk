@@ -39,7 +39,7 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>
-                                            @if($user->user_role == 1)
+                                            @if ($user->user_role == 1)
                                                 Admin
                                             @elseif($user->user_role == 2)
                                                 Manager
@@ -54,13 +54,31 @@
                                         <td>{{ $user->email_verified_at ? 'Yes' : 'No' }}</td>
                                         <td>{{ $user->created_at }}</td>
                                         <td>{{ $user->updated_at }}</td>
-                                        <td>{{ $user->status }}</td>
-                                        <td>
-                                            <button class="btn btn-outline-secondary btn-pill btn-sm"><i class="fa fa-eye"></i></button>
-                                            <button class="btn btn-outline-warning btn-pill btn-sm"><i class="fa fa-pencil"></i></button>
-                                            <a href="{{ route('users.destroy', $user->id) }}">
-                                                <button class="btn btn-outline-danger btn-pill btn-sm"><i class="fa fa-trash"></i></button>
+                                        <td class="text-center">
+                                            @if ($user->status == 'active')
+                                                <span class="badge rounded-pill bg-success badge-sm me-1 mb-1 mt-1">Active</span>
+                                            @elseif ($user->status == 'blocked')
+                                                <span class="badge rounded-pill bg-danger badge-sm me-1 mb-1 mt-1">Blocked</span>
+                                            @endif
+                                        </td>
+                                        <td class="text-center">
+                                            <a>
+                                                <button class="btn btn-outline-secondary btn-pill btn-sm"><i
+                                                        class="fa fa-eye"></i></button>
                                             </a>
+
+                                            @if (auth()->user()->user_role != 3)
+                                                <a>
+                                                    <button class="btn btn-outline-warning btn-pill btn-sm"><i
+                                                            class="fa fa-pencil"></i></button>
+                                                </a>
+                                            @endif
+                                            @if (auth()->user()->user_role == 1)
+                                                <a href="{{ route('users.destroy', $user->id) }}">
+                                                    <button class="btn btn-outline-danger btn-pill btn-sm"><i
+                                                            class="fa fa-trash"></i></button>
+                                                </a>
+                                            @endif
                                         </td>
                                     </tr>
                                 @endforeach
