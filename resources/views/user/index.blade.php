@@ -56,9 +56,9 @@
                                         <td>{{ $user->updated_at }}</td>
                                         <td>{{ $user->status }}</td>
                                         <td>
-                                            <button class="btn btn-primary btn-pill btn-sm"><i class="fa fa-pencil"></i></button>
-                                            <button class="btn btn-primary btn-pill btn-sm"><i class="fa fa-pencil"></i></button>
-                                            <button class="btn btn-primary btn-pill btn-sm"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-outline-secondary btn-pill btn-sm"><i class="fa fa-eye"></i></button>
+                                            <button class="btn btn-outline-warning btn-pill btn-sm"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-outline-danger btn-pill btn-sm"><i class="fa fa-trash"></i></button>
                                         </td>
                                     </tr>
                                 @endforeach

@@ -34,10 +34,16 @@ class UsersController extends Controller
         return redirect()->route('users.index')->with('success', 'User registered successfully!');
     }
 
+    public function showUser($id)
+    {
+        $user = User::findOrFail($id);
+        return view('users.edit', compact('user'));
+    }
+
     public function edit($id)
     {
         $user = User::findOrFail($id);
-        return view('user.edit', compact('user'));
+        return view('users.show', compact('user'));
     }
 
     public function update(Request $request, $id)
