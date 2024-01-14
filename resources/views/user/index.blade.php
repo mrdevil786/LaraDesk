@@ -64,19 +64,15 @@
                                             @endif
                                         </td>
                                         <td class="text-center">
-                                            <x-buttons.action-pill-button/>
+                                            <x-buttons.action-pill-button />
 
                                             @if (auth()->user()->user_role != 3)
-                                                <a href="#">
-                                                    <button class="btn btn-outline-warning btn-pill btn-sm"><i
-                                                            class="fa fa-pencil"></i></button>
-                                                </a>
+                                                <x-buttons.action-pill-button iconClass="fa fa-pencil"
+                                                    iconColor="warning" />
                                             @endif
                                             @if (auth()->user()->user_role == 1)
-                                                <a href="{{ route('users.destroy', $user->id) }}">
-                                                    <button class="btn btn-outline-danger btn-pill btn-sm"><i
-                                                            class="fa fa-trash"></i></button>
-                                                </a>
+                                                <x-buttons.action-pill-button href="{{ route('users.destroy', $user->id) }}"
+                                                    iconClass="fa fa-trash" iconColor="danger" />
                                             @endif
                                         </td>
                                     </tr>
