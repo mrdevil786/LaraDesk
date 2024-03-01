@@ -67,6 +67,19 @@ class UsersController extends Controller
         return redirect()->route('admin.users.index')->with('success', 'User updated successfully!');
     }
 
+    public function status(Request $request)
+    {
+        $request->validate([
+            'id' => 'required|numeric|exists:users,id',
+            'status' => 'required|in:active,blocked',
+        ]);
+
+        User::findOrFail($request->id)->update(['status' => $request->status]);
+
+        return response()->json(['message' => 'User status updated successfully']);
+    }
+
+
     public function destroy($id)
     {
         $user = User::findOrFail($id);

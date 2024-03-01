@@ -31,6 +31,7 @@
                                     <th class="wd-25p border-bottom-0">Created At</th>
                                     <th class="wd-25p border-bottom-0">Updated At</th>
                                     <th class="wd-25p border-bottom-0">Status</th>
+                                    <th class="wd-25p border-bottom-0">#</th>
                                     <th class="wd-25p border-bottom-0">Action</th>
                                 </tr>
                             </thead>
@@ -61,6 +62,14 @@
                                                 <x-extras.small-pill pillColor="danger" pillText="Blocked" />
                                             @endif
                                         </td>
+                                        <td>
+                                            <label class="custom-switch form-switch mb-0">
+                                                <input type="checkbox" name="custom-switch-radio"
+                                                    class="custom-switch-input" data-user-id="{{ $user->id }}"
+                                                    {{ $user->status == 'active' ? 'checked' : '' }}>
+                                                <span class="custom-switch-indicator"></span>
+                                            </label>
+                                        </td>
                                         <td class="text-center">
                                             <x-buttons.action-pill-button iconClass="fa fa-eye" iconColor="secondary" />
 
@@ -69,7 +78,8 @@
                                                     iconColor="warning" />
                                             @endif
                                             @if (auth()->user()->user_role == 1)
-                                                <x-buttons.action-pill-button href="{{ route('admin.users.destroy', $user->id) }}"
+                                                <x-buttons.action-pill-button
+                                                    href="{{ route('admin.users.destroy', $user->id) }}"
                                                     iconClass="fa fa-trash" iconColor="danger" />
                                             @endif
                                         </td>
@@ -152,4 +162,29 @@
     <script src="../assets/plugins/datatable/dataTables.responsive.min.js"></script>
     <script src="../assets/plugins/datatable/responsive.bootstrap5.min.js"></script>
     <script src="../assets/js/table-data.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('input[name="custom-switch-radio"]').change(function() {
+                var userId = $(this).data('user-id');
+                var status = $(this).prop('checked') ? 'active' : 'blocked';
+
+                $.ajax({
+                    url: "{{ route('admin.users.status') }}",
+                    method: "PUT",
+                    data: {
+                        id: userId,
+                        status: status,
+                        _token: "{{ csrf_token() }}"
+                    },
+                    success: function(response) {
+                        console.log(response);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(error);
+                    }
+                });
+            });
+        });
+    </script>
 @endsection
