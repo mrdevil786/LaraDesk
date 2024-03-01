@@ -1,5 +1,7 @@
 @extends('layout.main')
 
+@section('page-title','Dashboard')
+
 @section('main-section')
     <!-- PAGE-HEADER -->
     <div class="page-header">

@@ -1,5 +1,7 @@
 @extends('layout.main')
 
+@section('page-title','Users')
+
 @section('main-section')
     <!-- PAGE-HEADER -->
     <div class="page-header">
