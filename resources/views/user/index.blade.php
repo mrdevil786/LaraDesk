@@ -20,7 +20,7 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered text-nowrap border-bottom" id="basic-datatable">
+                        <table class="table table-bordered text-nowrap border-bottomm" id="file-datatable">
                             <thead>
                                 <tr>
                                     <th class="wd-15p border-bottom-0">#</th>
