@@ -24,7 +24,7 @@ class AuthController extends Controller
             return redirect()->route('admin.dashboard')->with('success', 'Successfully logged in.');
         }
 
-        return redirect()->route('admin.view.login')->with('danger', 'Invalid credentials.');
+        return redirect()->route('view.login')->with('danger', 'Invalid credentials.');
     }
 
     public function logout()

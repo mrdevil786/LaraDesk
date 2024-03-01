@@ -65,8 +65,17 @@
                             <span class="login100-form-title pb-5">
                                 Login
                             </span>
+
+                            @if (session('danger'))
+                                <div id="mainPageAlert" class="alert alert-danger" role="alert">
+                                    <span class="alert-inner--icon"><i class="fe fe-slash"></i></span>
+                                    <span class="alert-inner--text"><strong>Error!</strong>
+                                        {{ session('danger') }}</span>
+                                </div>
+                            @endif
+
                             <div class="panel panel-primary">
-                                
+
                                 <div class="panel-body tabs-menu-body p-0 pt-5">
                                     <div class="tab-content">
                                         <div class="tab-pane active" id="tab5">
@@ -92,7 +101,8 @@
                                                         class="text-primary ms-1">Forgot Password?</a></p>
                                             </div>
                                             <div class="container-login100-form-btn">
-                                                <button class="login100-form-btn btn-primary" type="submit">Login</button>
+                                                <button class="login100-form-btn btn-primary"
+                                                    type="submit">Login</button>
                                             </div>
                                             <div class="text-center pt-3">
                                                 <p class="text-dark mb-0">Not a member?<a href="register.html"
@@ -117,7 +127,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                             </div>

@@ -180,8 +180,8 @@
                                 <h3>Main</h3>
                             </li>
                             <li class="slide">
-                                <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{ url('admin/') }}"><i
-                                        class="side-menu__icon fe fe-home"></i><span
+                                <a class="side-menu__item has-link" data-bs-toggle="slide"
+                                    href="{{ url('admin/') }}"><i class="side-menu__icon fe fe-home"></i><span
                                         class="side-menu__label">Dashboard</span></a>
                             </li>
                             <li class="sub-category">
@@ -213,3 +213,13 @@
 
                     <!-- CONTAINER -->
                     <div class="main-container container-fluid">
+
+                        <br>
+
+                        @if (session('success'))
+                            <div id="mainPageAlert" class="alert alert-success" role="alert">
+                                <span class="alert-inner--icon"><i class="fe fe-thumbs-up"></i></span>
+                                <span class="alert-inner--text"><strong>Success!</strong>
+                                    {{ session('success') }}</span>
+                            </div>
+                        @endif

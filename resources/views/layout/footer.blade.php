@@ -671,6 +671,15 @@
 
 @yield('custom-script')
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            var alert = document.getElementById('mainPageAlert');
+            alert.remove();
+        }, 2000);
+    });
+</script>
+
 </body>
 
 </html>
