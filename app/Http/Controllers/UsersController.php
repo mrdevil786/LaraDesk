@@ -31,7 +31,7 @@ class UsersController extends Controller
             'user_role' => $request->role,
         ]);
 
-        return redirect()->route('users.index')->with('success', 'User registered successfully!');
+        return redirect()->route('admin.users.index')->with('success', 'User registered successfully!');
     }
 
     public function showUser($id)
@@ -64,7 +64,7 @@ class UsersController extends Controller
             'user_role' => $request->role,
         ]);
 
-        return redirect()->route('users.index')->with('success', 'User updated successfully!');
+        return redirect()->route('admin.users.index')->with('success', 'User updated successfully!');
     }
 
     public function destroy($id)
@@ -72,6 +72,6 @@ class UsersController extends Controller
         $user = User::findOrFail($id);
         $user->delete();
 
-        return redirect()->route('users.index')->with('success', 'User deleted successfully!');
+        return redirect()->route('admin.users.index')->with('success', 'User deleted successfully!');
     }
 }

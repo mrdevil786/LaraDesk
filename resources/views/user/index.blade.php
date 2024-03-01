@@ -69,7 +69,7 @@
                                                     iconColor="warning" />
                                             @endif
                                             @if (auth()->user()->user_role == 1)
-                                                <x-buttons.action-pill-button href="{{ route('users.destroy', $user->id) }}"
+                                                <x-buttons.action-pill-button href="{{ route('admin.users.destroy', $user->id) }}"
                                                     iconClass="fa fa-trash" iconColor="danger" />
                                             @endif
                                         </td>
@@ -92,7 +92,7 @@
                     class="fe fe-x fs-18"></i></button>
         </div>
         <div class="offcanvas-body">
-            <form method="POST" action="{{ route('users.store') }}">
+            <form method="POST" action="{{ route('admin.users.store') }}">
                 @csrf <!-- Add CSRF token -->
 
                 <div class="form-row">

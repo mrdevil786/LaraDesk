@@ -5,12 +5,12 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\Web\AuthController;
 use App\Http\Controllers\Web\BasicController;
 
-Route::middleware('guest')->group(function () {
+Route::prefix('admin')->middleware('guest')->group(function () {
     Route::get('/login', [AuthController::class, 'loginView'])->name('view.login');
     Route::post('/login', [AuthController::class, 'login'])->name('submit.login');
 });
 
-Route::middleware(['auth:sanctum','web'])->group(function () {
+Route::prefix('admin')->name('admin.')->middleware(['auth:sanctum','web'])->group(function () {
 
     Route::get('/', [BasicController::class, 'dashboard'])->name('dashboard');
     Route::get('logout', [AuthController::class, 'logout'])->name('user.logout');
