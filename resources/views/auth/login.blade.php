@@ -53,7 +53,7 @@
                 <!-- CONTAINER OPEN -->
                 <div class="col col-login mx-auto mt-7">
                     <div class="text-center">
-                        <a href="index.html"><img src="../assets/images/brand/logo-white.png" class="header-brand-img"
+                        <a href="{{ url('/') }}"><img src="../assets/images/brand/logo-white.png" class="header-brand-img"
                                 alt=""></a>
                     </div>
                 </div>
@@ -66,13 +66,7 @@
                                 {{ env('APP_NAME') }} – Login
                             </span>
 
-                            @if (session('danger'))
-                                <div id="mainPageAlert" class="alert alert-danger" role="alert">
-                                    <span class="alert-inner--icon"><i class="fe fe-slash"></i></span>
-                                    <span class="alert-inner--text"><strong>Error!</strong>
-                                        {{ session('danger') }}</span>
-                                </div>
-                            @endif
+                            @include('includes.alert')
 
                             <div class="panel panel-primary">
 
@@ -165,6 +159,14 @@
     <!-- CUSTOM JS -->
     <script src="../assets/js/custom.js"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                var alert = document.getElementById('mainPageAlert');
+                alert.remove();
+            }, 2000);
+        });
+    </script>
 
 </body>
 
