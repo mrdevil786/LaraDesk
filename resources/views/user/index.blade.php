@@ -1,6 +1,6 @@
 @extends('layout.main')
 
-@section('page-title','Users')
+@section('page-title', 'Users')
 
 @section('main-section')
     <!-- PAGE-HEADER -->
@@ -98,35 +98,27 @@
                 @csrf <!-- Add CSRF token -->
 
                 <div class="form-row">
-                    <div class="col-xl-12 mb-3">
-                        <label for="validationServer01">Full Name</label>
-                        <input type="text" class="form-control is-valid" id="validationServer01" name="name"
-                            value="" placeholder="Full Name" required>
-                    </div>
-                    <div class="col-xl-12 mb-3">
-                        <label for="validationServer02">Email</label>
-                        <input type="text" class="form-control is-valid" id="validationServer02" name="email"
-                            value="" placeholder="Email" required>
-                    </div>
-                    <div class="col-xl-12 mb-3">
-                        <label for="validationServer03">Password</label>
-                        <input type="password" class="form-control is-valid" id="validationServer03" name="password"
-                            placeholder="Password" required>
-                    </div>
-                    <div class="col-xl-12 mb-3">
-                        <label for="validationServer04">Confirm Password</label>
-                        <input type="password" class="form-control is-valid" id="validationServer04"
-                            name="password_confirmation" placeholder="Confirm Password" required>
-                    </div>
+
+                    <x-fields.input-field label="Full Name" name="name" />
+
+                    <x-fields.input-field label="Email" name="email" />
+
+                    <x-fields.input-field label="Password" name="password" type="password" />
+                    
+                    <x-fields.input-field label="Confirm Password" name="password_confirmation" type="password" />
+
                     <div class="col-xl-12 mb-3">
                         <label for="validationServer05">User Role</label>
-                        <select class="form-select form-control is-invalid" id="validationServer05" name="role"
-                            aria-describedby="validationServer05Feedback" required>
+                        <select class="form-select form-control @error('role') is-invalid @enderror" id="validationServer05"
+                            name="role" aria-describedby="validationServer05Feedback">
                             <option selected disabled value="">Choose...</option>
                             <option value="1">Administrator</option>
                             <option value="2">Editor</option>
                             <option value="3">Viewer</option>
                         </select>
+                        @error('role')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
                 </div>
 
