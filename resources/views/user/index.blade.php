@@ -29,7 +29,7 @@
                                     <th class="wd-15p border-bottom-0">Role</th>
                                     <th class="wd-20p border-bottom-0">Name</th>
                                     <th class="wd-15p border-bottom-0">Email</th>
-                                    <th class="wd-10p border-bottom-0">Verified</th>
+                                    {{-- <th class="wd-10p border-bottom-0">Verified</th> --}}
                                     <th class="wd-25p border-bottom-0">Created At</th>
                                     <th class="wd-25p border-bottom-0">Updated At</th>
                                     <th class="wd-25p border-bottom-0">Status</th>
@@ -54,7 +54,7 @@
                                         </td>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
-                                        <td>{{ $user->email_verified_at ? 'Yes' : 'No' }}</td>
+                                        {{-- <td>{{ $user->email_verified_at ? 'Yes' : 'No' }}</td> --}}
                                         <td>{{ $user->created_at }}</td>
                                         <td>{{ $user->updated_at }}</td>
                                         <td class="text-center">
