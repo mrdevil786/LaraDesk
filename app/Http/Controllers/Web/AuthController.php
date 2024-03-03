@@ -20,23 +20,20 @@ class AuthController extends Controller
             'email' => 'required|email',
             'password' => 'required',
         ]);
-
+    
         $credentials = $request->only('email', 'password');
-
-        // Check if the user exists and is not blocked
-        $user = User::where('email', $credentials['email'])->first();
-        if ($user && $user->status === 'blocked') {
-            return redirect()->route('view.login')->with('warning', 'Your account is blocked.');
-        }
-
-        // Attempt to authenticate the user
+    
         if (Auth::attempt($credentials)) {
+            $user = Auth::user();
+            if ($user->status === 'blocked') {
+                Auth::logout();
+                return redirect()->route('view.login')->with('warning', 'Your account is blocked.');
+            }
             return redirect()->route('admin.dashboard')->with('success', 'Successfully logged in.');
         }
-
+    
         return redirect()->route('view.login')->with('error', 'Invalid credentials.');
-    }
-
+    }    
 
     public function logout()
     {
