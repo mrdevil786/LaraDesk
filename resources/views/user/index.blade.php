@@ -113,7 +113,7 @@
     <!--/Right Offcanvas-->
 
     <!--Edit Modal - Right Offcanvas-->
-    <x-modal.right-offcanvas title="Edit User" action="{{ route('admin.users.store') }}" method="POST" id="editUserModal">
+    <x-modal.right-offcanvas title="Edit User" action="{{ route('admin.users.update') }}" method="POST" id="editUserModal">
 
         <x-fields.input-field label="Full Name" name="name" />
         <x-fields.input-field label="Email" name="email" />
