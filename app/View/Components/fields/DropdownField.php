@@ -15,13 +15,15 @@ class DropdownField extends Component
     public $name;
     public $id;
     public $options;
+    public $class;
 
-    public function __construct($label, $name, $id = null, $options = [])
+    public function __construct($label, $name, $id = null, $options = [], $class = 'col-xl-12 mb-3')
     {
         $this->label = $label;
         $this->name = $name;
         $this->id = $id ?? $name;
         $this->options = $options;
+        $this->class = $class;
     }
 
     /**

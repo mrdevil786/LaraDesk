@@ -1,4 +1,4 @@
-<div class="col-xl-12 mb-3">
+<div class="{{ $class }}">
     <label for="{{ $name }}">{{ $label }}</label>
     <select class="form-select form-control @error($name) is-invalid @enderror" id="{{ $id }}" name="{{ $name }}">
         <option selected disabled hidden value="">Choose...</option>
