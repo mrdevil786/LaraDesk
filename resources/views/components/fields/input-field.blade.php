@@ -1,4 +1,4 @@
-<div class="col-xl-12 mb-3">
+<div class="{{ $class }}">
     <label for="{{ $name }}">{{ $label }}</label>
     <input type="{{ $type }}" class="form-control @error($name) is-invalid @enderror"
            id="{{ $name }}" name="{{ $name }}" value="{{ $value }}" placeholder="Enter {{ $placeholder }}">

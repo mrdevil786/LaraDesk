@@ -6,12 +6,7 @@
     </div>
     <div class="offcanvas-body">
         <form method="{{ $method }}" action="{{ $action }}">
-            @csrf <!-- Add CSRF token -->
-
-            <!-- Hidden field for edit mode -->
-            @if($method === 'PUT')
-                <input type="hidden" name="_method" value="PUT">
-            @endif
+            @csrf
 
             <div class="form-row">
                 {{ $slot }}

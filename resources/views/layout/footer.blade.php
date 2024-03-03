@@ -675,7 +675,9 @@
     document.addEventListener('DOMContentLoaded', function() {
         setTimeout(function() {
             var alert = document.getElementById('mainPageAlert');
-            alert.remove();
+            if (alert) {
+                alert.remove();
+            }
         }, 2000);
     });
 </script>

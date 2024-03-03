@@ -67,8 +67,8 @@
                                             <x-buttons.action-pill-button iconClass="fa fa-eye" iconColor="secondary" />
 
                                             @if (auth()->user()->user_role != 3)
-                                                <x-buttons.action-pill-button iconClass="fa fa-pencil"
-                                                    iconColor="warning" modalTarget="editUserModal" />
+                                                <x-buttons.action-pill-button iconClass="fa fa-pencil" iconColor="warning"
+                                                    modalTarget="editUserModal" />
                                             @endif
                                             @if (auth()->user()->user_role == 1)
                                                 <x-buttons.action-pill-button
@@ -99,7 +99,7 @@
             <label for="validationServer05">User Role</label>
             <select class="form-select form-control @error('role') is-invalid @enderror" id="validationServer05"
                 name="role" aria-describedby="validationServer05Feedback">
-                <option selected disabled value="">Choose...</option>
+                <option selected disabled hidden value="">Choose...</option>
                 <option value="1">Administrator</option>
                 <option value="2">Editor</option>
                 <option value="3">Viewer</option>
@@ -108,32 +108,7 @@
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
-
-    </x-modal.right-offcanvas>
-    <!--/Right Offcanvas-->
-
-    <!--Edit Modal - Right Offcanvas-->
-    <x-modal.right-offcanvas title="Edit User" action="{{ route('admin.users.update') }}" method="POST" id="editUserModal">
-
-        <x-fields.input-field label="Full Name" name="name" />
-        <x-fields.input-field label="Email" name="email" />
-        <x-fields.input-field label="Password" name="password" type="password" />
-        <x-fields.input-field label="Confirm Password" name="password_confirmation" type="password" />
-
-        <div class="col-xl-12 mb-3">
-            <label for="validationServer05">User Role</label>
-            <select class="form-select form-control @error('role') is-invalid @enderror" id="validationServer05"
-                name="role" aria-describedby="validationServer05Feedback">
-                <option selected disabled value="">Choose...</option>
-                <option value="1">Administrator</option>
-                <option value="2">Editor</option>
-                <option value="3">Viewer</option>
-            </select>
-            @error('role')
-                <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
-        </div>
-
+        
     </x-modal.right-offcanvas>
     <!--/Right Offcanvas-->
 

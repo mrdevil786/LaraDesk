@@ -14,15 +14,17 @@ class InputField extends Component
     public $type;
     public $value;
     public $placeholder;
+    public $class;
 
-    public function __construct($label, $name, $id = null, $type = 'text', $value = null, $placeholder = null)
+    public function __construct($label, $name, $id = null, $type = 'text', $value = null, $placeholder = null, $class = 'col-xl-12 mb-3')
     {
         $this->label = $label;
         $this->name = $name;
         $this->id = $id ?: null;
-        $this->type = $type ?: 'text';
+        $this->type = $type ?? 'text';
         $this->value = $value ?? old($name);
         $this->placeholder = $placeholder ?? $label;
+        $this->class = $class;
     }
 
     public function render(): View|Closure|string

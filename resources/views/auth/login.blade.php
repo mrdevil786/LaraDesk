@@ -53,8 +53,8 @@
                 <!-- CONTAINER OPEN -->
                 <div class="col col-login mx-auto mt-7">
                     <div class="text-center">
-                        <a href="{{ url('/') }}"><img src="../assets/images/brand/logo-white.png" class="header-brand-img"
-                                alt=""></a>
+                        <a href="{{ url('/') }}"><img src="../assets/images/brand/logo-white.png"
+                                class="header-brand-img" alt=""></a>
                     </div>
                 </div>
 
@@ -75,16 +75,17 @@
                                         <div class="tab-pane active" id="tab5">
                                             <div class="wrap-input100 validate-input input-group"
                                                 data-bs-validate="Valid email is required: ex@abc.xyz">
-                                                <a href="javascript:void(0)"
-                                                    class="input-group-text bg-white text-muted">
+                                                <a class="input-group-text bg-white text-muted">
                                                     <i class="zmdi zmdi-email text-muted" aria-hidden="true"></i>
                                                 </a>
                                                 <input class="input100 border-start-0 form-control ms-0" type="email"
                                                     placeholder="Email" name="email" value="{{ old('email') }}">
+                                                @error('email')
+                                                    <div class="invalid-feedback">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                             <div class="wrap-input100 validate-input input-group" id="Password-toggle">
-                                                <a href="javascript:void(0)"
-                                                    class="input-group-text bg-white text-muted">
+                                                <a class="input-group-text bg-white text-muted">
                                                     <i class="zmdi zmdi-eye text-muted" aria-hidden="true"></i>
                                                 </a>
                                                 <input class="input100 border-start-0 form-control ms-0" type="password"
@@ -163,7 +164,9 @@
         document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
                 var alert = document.getElementById('mainPageAlert');
-                alert.remove();
+                if (alert) {
+                    alert.remove();
+                }
             }, 2000);
         });
     </script>
