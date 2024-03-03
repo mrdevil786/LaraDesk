@@ -18,7 +18,7 @@
             </div>
 
             <div class="col-xl-12 text-center">
-                <button class="btn btn-primary" type="submit">Submit form</button>
+                <button class="btn btn-primary" type="submit">Submit</button>
             </div>
         </form>
     </div>
