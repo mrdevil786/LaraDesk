@@ -32,7 +32,9 @@
                                     <th class="wd-15p border-bottom-0">Email</th>
                                     <th class="wd-25p border-bottom-0">Created At</th>
                                     <th class="wd-25p border-bottom-0">Updated At</th>
-                                    <th class="wd-25p border-bottom-0">Status</th>
+                                    @if (auth()->user()->user_role == 1)
+                                        <th class="wd-25p border-bottom-0">Status</th>
+                                    @endif
                                     <th class="wd-25p border-bottom-0">Action</th>
                                 </tr>
                             </thead>
@@ -55,14 +57,16 @@
                                         <td>{{ $user->email }}</td>
                                         <td>{{ $user->created_at }}</td>
                                         <td>{{ $user->updated_at }}</td>
-                                        <td class="text-center">
-                                            <label class="custom-switch form-switch mb-0">
-                                                <input type="checkbox" name="custom-switch-radio"
-                                                    class="custom-switch-input" data-user-id="{{ $user->id }}"
-                                                    {{ $user->status == 'active' ? 'checked' : '' }}>
-                                                <span class="custom-switch-indicator"></span>
-                                            </label>
-                                        </td>
+                                        @if (auth()->user()->user_role == 1)
+                                            <td class="text-center">
+                                                <label class="custom-switch form-switch mb-0">
+                                                    <input type="checkbox" name="custom-switch-radio"
+                                                        class="custom-switch-input" data-user-id="{{ $user->id }}"
+                                                        {{ $user->status == 'active' ? 'checked' : '' }}>
+                                                    <span class="custom-switch-indicator"></span>
+                                                </label>
+                                            </td>
+                                        @endif
                                         <td class="text-center">
                                             <x-buttons.action-pill-button iconClass="fa fa-eye" iconColor="secondary" />
 
@@ -94,7 +98,7 @@
         <x-fields.input-field label="Email" name="email" />
         <x-fields.input-field label="Password" name="password" type="password" />
         <x-fields.input-field label="Confirm Password" name="password_confirmation" type="password" />
-        <x-fields.dropdown-field label="User Role" name="role" :options="[1 => 'Administrator', 2 => 'Editor', 3 => 'Viewer']"/>
+        <x-fields.dropdown-field label="User Role" name="role" :options="[1 => 'Administrator', 2 => 'Editor', 3 => 'Viewer']" />
 
     </x-modal.right-offcanvas>
     <!--/Right Offcanvas-->
