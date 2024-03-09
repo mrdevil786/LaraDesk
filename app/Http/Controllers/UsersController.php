@@ -24,12 +24,13 @@ class UsersController extends Controller
             'role' => 'required|in:1,2,3',
         ]);
 
-        User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'user_role' => $request->role,
-        ]);
+        $user = new User();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password);
+        $user->user_role = $request->role;
+    
+        $user->save();
 
         return redirect()->route('admin.users.index')->with('success', 'User registered successfully!');
     }
