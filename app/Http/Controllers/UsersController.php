@@ -8,12 +8,14 @@ use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
 {
+    // RETRIEVE ALL USERS AND DISPLAY THEM IN A VIEW
     public function index()
     {
         $users = User::all();
         return view('user.index', compact('users'));
     }
 
+    // VALIDATE AND STORE A NEW USER
     public function store(Request $request)
     {
         $request->validate([
@@ -29,24 +31,20 @@ class UsersController extends Controller
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
         $user->user_role = $request->role;
-    
+
         $user->save();
 
         return redirect()->route('admin.users.index')->with('success', 'User registered successfully!');
     }
 
-    public function showUser($id)
-    {
-        $user = User::findOrFail($id);
-        return view('users.edit', compact('user'));
-    }
-
+    // EDIT A SPECIFIC USER
     public function edit($id)
     {
         $user = User::findOrFail($id);
         return view('user.edit', compact('user'));
     }
 
+    // UPDATE A USER'S DETAILS
     public function update(Request $request)
     {
         $request->validate([
@@ -66,6 +64,7 @@ class UsersController extends Controller
         return redirect()->route('admin.users.index')->with('success', 'User updated successfully!');
     }
 
+    // UPDATE USER'S STATUS (ACTIVE OR BLOCKED)
     public function status(Request $request)
     {
         $request->validate([
@@ -78,6 +77,7 @@ class UsersController extends Controller
         return response()->json(['message' => 'User status updated successfully']);
     }
 
+    // DELETE A USER
     public function destroy($id)
     {
         $user = User::findOrFail($id);
