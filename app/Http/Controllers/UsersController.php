@@ -43,26 +43,24 @@ class UsersController extends Controller
     public function edit($id)
     {
         $user = User::findOrFail($id);
-        return view('users.show', compact('user'));
+        return view('user.edit', compact('user'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         $request->validate([
             'name' => 'required|string',
-            'email' => 'required|email|unique:users,email,' . $id,
-            'password' => 'nullable|min:4|confirmed',
-            'password_confirmation' => 'nullable|min:4',
+            'email' => 'required|email|unique:users,email,' . $request->id,
             'role' => 'required|in:1,2,3',
         ]);
 
-        $user = User::findOrFail($id);
-        $user->update([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => $request->password ? Hash::make($request->password) : $user->password,
-            'user_role' => $request->role,
-        ]);
+        $user = User::findOrFail($request->id);
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->user_role = $request->role;
+
+        $user->save();
 
         return redirect()->route('admin.users.index')->with('success', 'User updated successfully!');
     }
@@ -78,7 +76,6 @@ class UsersController extends Controller
 
         return response()->json(['message' => 'User status updated successfully']);
     }
-
 
     public function destroy($id)
     {

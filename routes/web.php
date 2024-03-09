@@ -10,35 +10,35 @@ Route::prefix('admin')->middleware('guest')->group(function () {
     Route::post('/login', [AuthController::class, 'login'])->name('submit.login');
 });
 
-Route::prefix('admin')->name('admin.')->middleware(['auth:sanctum','web'])->group(function () {
+Route::prefix('admin')->name('admin.')->middleware(['auth:sanctum', 'web'])->group(function () {
 
     Route::get('/', [BasicController::class, 'dashboard'])->name('dashboard');
     Route::get('logout', [AuthController::class, 'logout'])->name('user.logout');
 
     Route::name('users.')
-    ->prefix('users')
-    ->middleware('admin')
-    ->controller(UsersController::class)->group(function () {
-        Route::get('/{id}','destroy')->name('destroy');
-        Route::put('status', 'status')->name('status');
-    });
+        ->prefix('users')
+        ->middleware('admin')
+        ->controller(UsersController::class)->group(function () {
+            Route::get('/{id}', 'destroy')->name('destroy');
+            Route::put('status', 'status')->name('status');
+        });
 
     Route::name('users.')
-    ->prefix('users')
-    ->middleware('manager')
-    ->controller(UsersController::class)->group(function () {
-        Route::post('store','store')->name('store');
-        Route::get('edit/{id}', 'edit')->name('edit');
-        Route::post('update', 'update')->name('update');
-    });
+        ->prefix('users')
+        ->middleware('manager')
+        ->controller(UsersController::class)->group(function () {
+            Route::post('store', 'store')->name('store');
+            Route::get('edit/{id}', 'edit')->name('edit');
+            Route::put('update/{id}', 'update')->name('update');
+        });
 
     Route::name('users.')
-    ->prefix('users')
-    ->middleware('member')
-    ->controller(UsersController::class)->group(function () {
-        Route::get('/', 'index')->name('index');
-        Route::get('view/{id}', 'showUser')->name('show');
-    });
+        ->prefix('users')
+        ->middleware('member')
+        ->controller(UsersController::class)->group(function () {
+            Route::get('/', 'index')->name('index');
+            Route::get('view/{id}', 'showUser')->name('show');
+        });
 });
 
 // Route::name('users.')

@@ -13,25 +13,26 @@
         content="admin,admin dashboard,admin panel,admin template,bootstrap,clean,dashboard,flat,jquery,modern,responsive,premium admin templates,responsive admin,ui,ui kit.">
 
     <!-- FAVICON -->
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/brand/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('../assets/images/brand/favicon.ico') }}" />
 
     <!-- TITLE -->
     <title>{{ env('APP_NAME') }} – @yield('page-title')</title>
 
     <!-- BOOTSTRAP CSS -->
-    <link id="style" href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link id="style" href="{{ asset('../assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
 
     <!-- STYLE CSS -->
-    <link href="../assets/css/style.css" rel="stylesheet" />
-    <link href="../assets/css/dark-style.css" rel="stylesheet" />
-    <link href="../assets/css/transparent-style.css" rel="stylesheet">
-    <link href="../assets/css/skin-modes.css" rel="stylesheet" />
+    <link href="{{ asset('../assets/css/style.css') }}" rel="stylesheet" />
+    <link href="{{ asset('../assets/css/dark-style.css') }}" rel="stylesheet" />
+    <link href="{{ asset('../assets/css/transparent-style.css') }}" rel="stylesheet">
+    <link href="{{ asset('../assets/css/skin-modes.css') }}" rel="stylesheet" />
 
     <!--- FONT-ICONS CSS -->
-    <link href="../assets/css/icons.css" rel="stylesheet" />
+    <link href="{{ asset('../assets/css/icons.css') }}" rel="stylesheet" />
 
     <!-- COLOR SKIN CSS -->
-    <link id="theme" rel="stylesheet" type="text/css" media="all" href="../assets/colors/color1.css" />
+    <link id="theme" rel="stylesheet" type="text/css" media="all"
+        href="{{ asset('../assets/colors/color1.css') }}" />
 
 </head>
 
@@ -39,7 +40,7 @@
 
     <!-- GLOBAL-LOADER -->
     <div id="global-loader">
-        <img src="../assets/images/loader.svg" class="loader-img" alt="Loader">
+        <img src="{{ asset('../assets/images/loader.svg') }}" class="loader-img" alt="Loader">
     </div>
     <!-- /GLOBAL-LOADER -->
 
@@ -55,10 +56,10 @@
                             href="javascript:void(0)"></a>
                         <!-- sidebar-toggle-->
                         <a class="logo-horizontal " href="/">
-                            <img src="../assets/images/brand/logo.png" class="header-brand-img desktop-logo"
-                                alt="logo">
-                            <img src="../assets/images/brand/logo-3.png" class="header-brand-img light-logo1"
-                                alt="logo">
+                            <img src="{{ asset('../assets/images/brand/logo.png') }}"
+                                class="header-brand-img desktop-logo" alt="logo">
+                            <img src="{{ asset('../assets/images/brand/logo-3.png') }}"
+                                class="header-brand-img light-logo1" alt="logo">
                         </a>
                         <!-- LOGO -->
                         <div class="main-header-center ms-3 d-none d-lg-block">
@@ -117,7 +118,8 @@
                                         <div class="dropdown d-flex profile-1">
                                             <a href="javascript:void(0)" data-bs-toggle="dropdown"
                                                 class="nav-link leading-none d-flex">
-                                                <img src="../assets/images/users/21.jpg" alt="profile-user"
+                                                <img src="{{ asset('../assets/images/users/21.jpg') }}"
+                                                    alt="profile-user"
                                                     class="avatar  profile-user brround cover-image">
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
@@ -159,14 +161,14 @@
                 <div class="app-sidebar">
                     <div class="side-header">
                         <a class="header-brand1" href="/">
-                            <img src="../assets/images/brand/logo.png" class="header-brand-img desktop-logo"
-                                alt="logo">
-                            <img src="../assets/images/brand/logo-1.png" class="header-brand-img toggle-logo"
-                                alt="logo">
-                            <img src="../assets/images/brand/logo-2.png" class="header-brand-img light-logo"
-                                alt="logo">
-                            <img src="../assets/images/brand/logo-3.png" class="header-brand-img light-logo1"
-                                alt="logo">
+                            <img src="{{ asset('../assets/images/brand/logo.png') }}"
+                                class="header-brand-img desktop-logo" alt="logo">
+                            <img src="{{ asset('../assets/images/brand/logo-1.png') }}"
+                                class="header-brand-img toggle-logo" alt="logo">
+                            <img src="{{ asset('../assets/images/brand/logo-2.png') }}"
+                                class="header-brand-img light-logo" alt="logo">
+                            <img src="{{ asset('../assets/images/brand/logo-3.png') }}"
+                                class="header-brand-img light-logo1" alt="logo">
                         </a>
                         <!-- LOGO -->
                     </div>
