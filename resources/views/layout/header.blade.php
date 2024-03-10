@@ -189,14 +189,14 @@
                             <li class="sub-category">
                                 <h3>UI Kit</h3>
                             </li>
-                            <li class="slide">
-                                <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i
+                            <li class="slide {{ Request::is('admin/users*') ? 'is-expanded' : '' }}"">
+                                <a class="side-menu__item {{ Request::is('admin/users*') ? 'active' : '' }}" data-bs-toggle="slide" href="javascript:void(0)"><i
                                         class="side-menu__icon fe fe-user"></i><span
                                         class="side-menu__label">Users</span><i
                                         class="angle fe fe-chevron-right"></i></a>
                                 <ul class="slide-menu">
                                     <li class="side-menu-label1"><a href="javascript:void(0)">Apps</a></li>
-                                    <li><a href="{{ url('admin/users/') }}" class="slide-item"> Manage Users</a></li>
+                                    <li><a href="{{ url('admin/users/') }}" class="slide-item {{ Request::is('admin/users*') ? 'active' : '' }}"> Manage Users</a></li>
                                 </ul>
                             </li>
                         </ul>
