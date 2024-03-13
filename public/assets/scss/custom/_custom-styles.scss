@@ -2905,7 +2905,7 @@ ul.inbox-pagination li {
 .login-social-icon::before {
     content: "";
     position: absolute;
-    width: 28%;
+    width: auto;
     height: 1px;
     left: 0;
     right: 0;
@@ -2915,7 +2915,7 @@ ul.inbox-pagination li {
 .login-social-icon::after {
     content: "";
     position: absolute;
-    width: 28%;
+    width: auto;
     height: 1px;
     left: auto;
     right: 0;
