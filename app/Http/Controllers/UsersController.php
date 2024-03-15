@@ -12,7 +12,7 @@ class UsersController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('user.index', compact('users'));
+        return view('admin.user.index', compact('users'));
     }
 
     // VALIDATE AND STORE A NEW USER
@@ -41,7 +41,7 @@ class UsersController extends Controller
     public function edit($id)
     {
         $user = User::findOrFail($id);
-        return view('user.edit', compact('user'));
+        return view('admin.user.edit', compact('user'));
     }
 
     // UPDATE A USER'S DETAILS
