@@ -40,7 +40,7 @@ class Kernel extends HttpKernel
 
         'api' => [
             \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
-            \Illuminate\Routing\Middleware\ThrottleRequests::class.':api',
+            \Illuminate\Routing\Middleware\ThrottleRequests::class . ':api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
     ];
@@ -53,6 +53,7 @@ class Kernel extends HttpKernel
      * @var array<string, class-string|string>
      */
     protected $middlewareAliases = [
+        'checkAdminStatus' => \App\Http\Middleware\CheckAdminStatus::class,
         'auth' => \App\Http\Middleware\Authenticate::class,
         'admin' => \App\Http\Middleware\Admin::class,
         'manager' => \App\Http\Middleware\Manager::class,

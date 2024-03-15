@@ -10,7 +10,7 @@ Route::prefix('admin')->middleware('guest')->group(function () {
     Route::post('/login', [AuthController::class, 'login'])->name('submit.login');
 });
 
-Route::prefix('admin')->name('admin.')->middleware(['auth:sanctum', 'web'])->group(function () {
+Route::prefix('admin')->name('admin.')->middleware(['auth:sanctum', 'web', 'checkAdminStatus'])->group(function () {
 
     Route::get('/', [BasicController::class, 'dashboard'])->name('dashboard');
     Route::get('logout', [AuthController::class, 'logout'])->name('user.logout');
