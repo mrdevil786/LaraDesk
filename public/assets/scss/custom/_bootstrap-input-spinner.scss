@@ -1,0 +1,102 @@
+.was-validated .is-loading > .form-control:valid ~ .spinner-border, .was-validated .is-loading > .form-control:valid ~ .spinner-grow, .is-loading > .form-control.is-valid ~ .spinner-border, .is-loading > .form-control.is-valid ~ .spinner-grow {
+  right: calc(( 1.75rem + 2px ) + 3px);
+}
+.is-loading > .form-control ~ .spinner-border, .is-loading > .form-control ~ .spinner-grow, .is-loading > .form-control-plaintext ~ .spinner-border, .is-loading > .form-control-plaintext ~ .spinner-grow, .is-loading > .custom-select ~ .spinner-border, .is-loading > .custom-select ~ .spinner-grow, .is-loading > textarea[rows="1"].form-control ~ .spinner-border, .is-loading > textarea[rows="1"].form-control ~ .spinner-grow {
+  position: absolute;
+  top: 7px;
+  right: calc(0.375em + 0.1875rem);
+  z-index: 4;
+  border-radius: 50% !important;
+}
+.is-loading {
+  position: relative;
+  .spinner-border{
+    color: $primary-1;
+  }
+}
+.was-validated .is-loading > .form-control:valid, .is-loading > .form-control.is-valid {
+  padding-right: calc( (1.5em + 0.75rem) + 25px );
+}
+.is-loading > .form-control, .is-loading > .form-control-plaintext, .is-loading > .custom-select, .is-loading > textarea[rows="1"].form-control {
+  padding-right: calc(1.5em + 0.75rem);
+}
+.is-loading > .form-control ~ .spinner-border.spinner-border-sm, .is-loading > .form-control ~ .spinner-border.spinner-grow-sm, .is-loading > .form-control ~ .spinner-grow.spinner-border-sm, .is-loading > .form-control ~ .spinner-grow.spinner-grow-sm, .is-loading > .form-control-plaintext ~ .spinner-border.spinner-border-sm, .is-loading > .form-control-plaintext ~ .spinner-border.spinner-grow-sm, .is-loading > .form-control-plaintext ~ .spinner-grow.spinner-border-sm, .is-loading > .form-control-plaintext ~ .spinner-grow.spinner-grow-sm, .is-loading > .custom-select ~ .spinner-border.spinner-border-sm, .is-loading > .custom-select ~ .spinner-border.spinner-grow-sm, .is-loading > .custom-select ~ .spinner-grow.spinner-border-sm, .is-loading > .custom-select ~ .spinner-grow.spinner-grow-sm, .is-loading > textarea[rows="1"].form-control ~ .spinner-border.spinner-border-sm, .is-loading > textarea[rows="1"].form-control ~ .spinner-border.spinner-grow-sm, .is-loading > textarea[rows="1"].form-control ~ .spinner-grow.spinner-border-sm, .is-loading > textarea[rows="1"].form-control ~ .spinner-grow.spinner-grow-sm {
+  top: calc( (0.375em + 0.1875rem) + 2px );
+  border-radius: 50% !important;
+}
+.was-validated .is-loading > .form-control:invalid ~ .spinner-border, .was-validated .is-loading > .form-control:invalid ~ .spinner-grow, .is-loading > .form-control.is-invalid ~ .spinner-border, .is-loading > .form-control.is-invalid ~ .spinner-grow {
+  right: calc(( 1.75rem + 2px ) + 3px);
+}
+.is-loading{
+  .form-control-plaintext{
+    padding-left: 7px;
+    &:focus-visible {
+        outline: none;
+        border: 1px solid $border;
+    }
+  }
+  .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback){
+    border-radius: 50%;
+  }
+  .flex-fill {
+    flex: 1 1 auto !important;
+  }
+  .spinner-border{
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .spinner-border-sm {
+      width: 1rem;
+      height: 1rem;
+  }
+  .spinner-grow{
+    width: 1.5rem;
+    height: 1.5rem;
+    color: $primary-09;
+  }
+  .spinner-grow-sm {
+      width: 1rem;
+      height: 1rem;
+  }
+  select option{
+    padding: 3px;
+    padding-left: 7px;
+  }
+}
+
+.is-loading>.form-control-sm~.spinner-border.spinner-border-sm{
+  top: 6px;
+}
+
+.is-loading>.form-control-lg~.spinner-border.spinner-border-sm{
+  top: 15px;
+}
+.is-loading>.form-control-lg~.spinner-border{
+  top: 10px;
+}
+.input-group{
+  .is-loading.spinner-append{
+    .form-control{
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      line-height: 1.66;
+    }
+  }
+}
+
+.input-group.is-loading{
+  .form-control{
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+  }
+}
+.input-group.multiple-input-group{
+  .input-group-text{
+    border: 1px solid $white-2;
+  }
+  .is-loading{
+    .form-control{
+      line-height: 1.63;
+    }
+  }
+}
