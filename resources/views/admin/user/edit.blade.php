@@ -56,7 +56,7 @@
                         <div class="col-xl-4 mb-3">
                             <label class="form-label mt-0" for="role">User Role</label>
                             @if ($isEdit)
-                                <select class="form-control" id="role" name="role">
+                                <select class="form-select form-control" id="role" name="role">
                                     <option value="1" {{ old('role', $user->user_role) == 1 ? 'selected' : '' }}>
                                         Administrator</option>
                                     <option value="2" {{ old('role', $user->user_role) == 2 ? 'selected' : '' }}>
