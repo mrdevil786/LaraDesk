@@ -6,7 +6,7 @@ use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
 
 // Guest routes
-Route::prefix('admin')->middleware('guest')->group(function () {
+Route::prefix('admin')->name('admin.')->middleware('guest')->group(function () {
     Route::get('/login', [AuthController::class, 'loginView'])->name('view.login');
     Route::post('/login', [AuthController::class, 'login'])->name('submit.login');
 });

@@ -10,7 +10,7 @@ class AuthController extends Controller
 {
     public function loginView()
     {
-        return view('auth.login');
+        return view('admin.auth.login');
     }
 
     public function login(Request $request)
@@ -26,12 +26,12 @@ class AuthController extends Controller
             $user = Auth::user();
             if ($user->status === 'blocked') {
                 Auth::logout();
-                return redirect()->route('view.login')->with('warning', 'Your account is blocked.');
+                return redirect()->route('admin.view.login')->with('warning', 'Your account is blocked.');
             }
             return redirect()->route('admin.dashboard')->with('success', 'Successfully logged in.');
         }
     
-        return redirect()->route('view.login')->with('error', 'Invalid credentials.');
+        return redirect()->route('admin.view.login')->with('error', 'Invalid credentials.');
     }    
 
     public function logout()
@@ -41,6 +41,6 @@ class AuthController extends Controller
         request()->session()->invalidate();
         request()->session()->regenerateToken();
 
-        return redirect()->route('view.login')->with('success', 'Successfully logged out.');
+        return redirect()->route('admin.view.login')->with('success', 'Successfully logged out.');
     }
 }
