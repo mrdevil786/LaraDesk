@@ -8645,7 +8645,7 @@ body.fixed-header .page {
     display: block;
     -ms-flex-align: center;
     align-items: center;
-    margin: 1.5rem 0rem 1.5rem;
+    /* margin: 1.5rem 0rem 1.5rem; */
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     justify-content: space-between;
