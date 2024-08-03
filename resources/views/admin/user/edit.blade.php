@@ -117,7 +117,4 @@
 
     <!-- FORMVALIDATION JS -->
     <script src="{{ asset('assets/js/form-validation.js') }}"></script>
-
-    <!-- CUSTOM JS -->
-    <script src="{{ asset('assets/js/custom.js') }}"></script>
 @endsection
