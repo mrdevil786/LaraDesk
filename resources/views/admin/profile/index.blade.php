@@ -24,7 +24,7 @@
                         <div class="text-center chat-image mb-5">
                             <div class="mb-3">
                                 <span class="avatar avatar-xxl brround cover-image"
-                                    data-bs-image-src="{{ asset($user->avatar) }}"></span>
+                                    data-bs-image-src="{{ asset($user->avatar ?? 'assets/profile.svg') }}"></span>
                             </div>
                             <div>
                                 <a href="profile.html">
