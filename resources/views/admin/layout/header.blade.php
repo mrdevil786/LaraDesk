@@ -221,4 +221,4 @@
 
                         <br>
 
-                        @include('includes.alert')
+                        @include('admin.includes.alert')

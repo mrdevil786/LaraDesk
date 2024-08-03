@@ -1,8 +1,8 @@
-@extends('layout.main')
+@extends('admin.layout.main')
 
 @section('page-title', $isEdit ? 'Edit User' : 'View User')
 
-@section('main-section')
+@section('admin-main-section')
 
     <!-- PAGE-HEADER -->
     <div class="page-header">

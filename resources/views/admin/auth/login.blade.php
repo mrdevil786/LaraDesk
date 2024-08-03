@@ -42,7 +42,7 @@
 
         <!-- GLOABAL LOADER -->
         <div id="global-loader">
-            <img src="../assets/images/loader.svg" class="loader-img" alt="Loader">
+            <img src="{{ asset('assets/images/loader.svg') }}" class="loader-img" alt="Loader">
         </div>
         <!-- /GLOABAL LOADER -->
 
@@ -66,7 +66,7 @@
                                 {{ env('APP_NAME') }} – Login
                             </span>
 
-                            @include('includes.alert')
+                            @include('admin.includes.alert')
 
                             <div class="panel panel-primary">
 
