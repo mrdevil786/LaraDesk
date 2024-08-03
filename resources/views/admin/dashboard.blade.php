@@ -1,6 +1,6 @@
 @extends('admin.layout.main')
 
-@section('page-title','Dashboard')
+@section('admin-page-title','Dashboard')
 
 @section('admin-main-section')
     <!-- PAGE-HEADER -->

@@ -1,6 +1,6 @@
 @extends('admin.layout.main')
 
-@section('page-title', $isEdit ? 'Edit User' : 'View User')
+@section('admin-page-title', $isEdit ? 'Edit User' : 'View User')
 
 @section('admin-main-section')
 

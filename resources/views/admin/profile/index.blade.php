@@ -1,8 +1,8 @@
-@extends('layout.main')
+@extends('admin.layout.main')
 
-@section('page-title', 'Users')
+@section('admin-page-title', 'Users')
 
-@section('main-section')
+@section('admin-main-section')
 
     <!-- PAGE-HEADER -->
     <div class="page-header">

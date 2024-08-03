@@ -1,6 +1,6 @@
 @extends('admin.layout.main')
 
-@section('page-title', 'Users')
+@section('admin-page-title', 'Users')
 
 @section('admin-main-section')
 
