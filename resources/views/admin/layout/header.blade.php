@@ -13,26 +13,26 @@
         content="admin,admin dashboard,admin panel,admin template,bootstrap,clean,dashboard,flat,jquery,modern,responsive,premium admin templates,responsive admin,ui,ui kit.">
 
     <!-- FAVICON -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('../assets/images/brand/favicon.ico') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/brand/favicon.ico') }}" />
 
     <!-- TITLE -->
     <title>{{ env('APP_NAME') }} – @yield('page-title')</title>
 
     <!-- BOOTSTRAP CSS -->
-    <link id="style" href="{{ asset('../assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link id="style" href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
 
     <!-- STYLE CSS -->
-    <link href="{{ asset('../assets/css/style.css') }}" rel="stylesheet" />
-    <link href="{{ asset('../assets/css/dark-style.css') }}" rel="stylesheet" />
-    <link href="{{ asset('../assets/css/transparent-style.css') }}" rel="stylesheet">
-    <link href="{{ asset('../assets/css/skin-modes.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/dark-style.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/transparent-style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/skin-modes.css') }}" rel="stylesheet" />
 
     <!--- FONT-ICONS CSS -->
-    <link href="{{ asset('../assets/css/icons.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet" />
 
     <!-- COLOR SKIN CSS -->
     <link id="theme" rel="stylesheet" type="text/css" media="all"
-        href="{{ asset('../assets/colors/color1.css') }}" />
+        href="{{ asset('assets/colors/color1.css') }}" />
 
 </head>
 
@@ -40,7 +40,7 @@
 
     <!-- GLOBAL-LOADER -->
     <div id="global-loader">
-        <img src="{{ asset('../assets/images/loader.svg') }}" class="loader-img" alt="Loader">
+        <img src="{{ asset('assets/images/loader.svg') }}" class="loader-img" alt="Loader">
     </div>
     <!-- /GLOBAL-LOADER -->
 
@@ -56,9 +56,9 @@
                             href="javascript:void(0)"></a>
                         <!-- sidebar-toggle-->
                         <a class="logo-horizontal " href="/">
-                            <img src="{{ asset('../assets/images/brand/logo.png') }}"
+                            <img src="{{ asset('assets/images/brand/logo.png') }}"
                                 class="header-brand-img desktop-logo" alt="logo">
-                            <img src="{{ asset('../assets/images/brand/logo-3.png') }}"
+                            <img src="{{ asset('assets/images/brand/logo-3.png') }}"
                                 class="header-brand-img light-logo1" alt="logo">
                         </a>
                         <!-- LOGO -->
@@ -161,13 +161,13 @@
                 <div class="app-sidebar">
                     <div class="side-header">
                         <a class="header-brand1" href="/">
-                            <img src="{{ asset('../assets/images/brand/logo.png') }}"
+                            <img src="{{ asset('assets/images/brand/logo.png') }}"
                                 class="header-brand-img desktop-logo" alt="logo">
-                            <img src="{{ asset('../assets/images/brand/logo-1.png') }}"
+                            <img src="{{ asset('assets/images/brand/logo-1.png') }}"
                                 class="header-brand-img toggle-logo" alt="logo">
-                            <img src="{{ asset('../assets/images/brand/logo-2.png') }}"
+                            <img src="{{ asset('assets/images/brand/logo-2.png') }}"
                                 class="header-brand-img light-logo" alt="logo">
-                            <img src="{{ asset('../assets/images/brand/logo-3.png') }}"
+                            <img src="{{ asset('assets/images/brand/logo-3.png') }}"
                                 class="header-brand-img light-logo1" alt="logo">
                         </a>
                         <!-- LOGO -->
