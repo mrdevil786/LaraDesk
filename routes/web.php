@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ProfilesController;
 
 // Guest routes
 Route::prefix('admin')->name('admin.')->middleware('guest')->group(function () {
@@ -38,6 +39,18 @@ Route::prefix('admin')->name('admin.')->middleware(['auth:sanctum', 'web', 'chec
         Route::middleware('member')->group(function () {
             Route::get('/', 'index')->name('index');
             Route::get('view/{id}', 'view')->name('view');
+        });
+    });
+
+    // Profile routes
+    Route::prefix('profile')->name('profile.')->controller(ProfilesController::class)->group(function () {
+
+        // Routes for members
+        Route::middleware('member')->group(function () {
+            Route::get('/', 'index')->name('index');
+            Route::get('view/{id}', 'view')->name('view');
+            Route::post('update', 'updateProfile')->name('update');
+            Route::post('update-password', 'updatePassword')->name('update.password');
         });
     });
 });
