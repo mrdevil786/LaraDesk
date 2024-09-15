@@ -20,7 +20,7 @@ class CheckAdminStatus
 
         if ($user && $user->status === 'blocked') {
             Auth::guard('web')->logout();
-            return redirect()->route('view.login')->with('warning', 'Your account is blocked.');
+            return redirect()->route('admin.view.login')->with('warning', 'Your account is blocked.');
         }
 
         return $next($request);
